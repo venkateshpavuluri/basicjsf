@@ -1,0 +1,45 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+   
+   
+<h:body>
+
+  
+      <h:form>
+         <h2>This is page1</h2>
+          <h3>Forward</h3>
+ <h:outputText value="#{basicExp.userName}"></h:outputText>
+ <h:outputText value="#{basicExp.password}"></h:outputText>
+
+     <h:commandButton action="home?faces-redirect=true"
+            value="click here to go back"/>
+            </h:form>
+         <ui:repeat value="#{basicExp.active}" var="s">		
+         #{s}
+      </ui:repeat>   
+      
+      <h3>Many Listbox iss</h3>
+         <ui:repeat value="#{basicExp.many}" var="s">		
+         #{s}
+      </ui:repeat>  
+
+      <h3>Menu values</h3>
+    #{basicExp.menu }
+ <h:outputFormat value="parameter 1 : {0}, parameter 2 : {1}">
+ <f:param value="venky"></f:param>
+  <f:param value="nani"></f:param>
+ </h:outputFormat>
+ 
+ <h3>actionlistener</h3>
+ #{basicExp.data}
+ 
+  <h3>BasicPage</h3>
+ #{basicExp.messagepage}
+ 
+                </h:body>
+</html>
