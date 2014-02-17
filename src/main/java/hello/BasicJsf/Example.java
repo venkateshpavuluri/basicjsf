@@ -20,6 +20,7 @@ import javax.faces.event.ActionEvent;
  *
  */
 @ManagedBean (name="basicExp",eager=true)
+@SessionScoped
 
 public class Example implements Serializable {
 	
